@@ -35,16 +35,20 @@ class MainActivity : AppCompatActivity() {
         })
 
         binding.tvNext.setOnClickListener {
-            if (page < 10) {
-                page = page + 1
-                setPage()
+            arrPost?.let {
+                if (page < 10) {
+                    page = page + 1
+                    setPage()
+                }
             }
         }
 
         binding.tvPrev.setOnClickListener {
-            if (page > 1) {
-                page = page - 1
-                setPage()
+            arrPost?.let {
+                if (page > 1) {
+                    page = page - 1
+                    setPage()
+                }
             }
         }
     }
